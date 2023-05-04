@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+<body>
+    <form action="/" id="value1_form">
+        <p style="display:inline">값1:</p>
+        <input type="text" name="value1">
+    </form>
+    <form id = "value2_form">
+        <p style="display:inline">값2:</p>
+        <input type="text" name="value2">
+    </form>
+    <form id = "value3_form">
+        <p style="display:inline">연산자:</p>
+        <input type="text" name="value3">
+    </form>
+    <form id = "calc_form">
+        <button id="calc" >계산</button>
+    </form>
+    <form id = "reset_form">
+        <button id="reset" >초기화</button>
+    </form>
+    <form id = "result">
+        <input type="text" name="result">
+    </form>
+
+    <script>
+        const calc = document.querySelector("#calc_form")
+        // const calc = calc_form.querySelector("#calc")
+        calc.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const valueinput1 = document.querySelector('input[name=value1]')
+            const valueinput2 = document.querySelector('input[name=value2]')
+            const valueinput3 = document.querySelector('input[name=value3]')
+            const result = document.querySelector('#result')
+            $('input[name=result]').attr('value', eval(valueinput1.value+valueinput3.value+valueinput2.value));
+        })
+
+        const reset = document.querySelector('#reset_form')
+        reset.addEventListener('input', function(e) {
+            e.preventDefault();
+            $('input[name=value1]').attr('value', '');
+            $('input[name=value2]').attr('value', '');
+            $('input[name=value3]').attr('value', '');
+        })
+    </script>
+    <script src="practice2.js"></script>
+</body>
+</html>

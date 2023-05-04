@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var kdt = "안녕하세요 ?? HI~";
+        console.log(kdt)
+        kdt = "sibali"
+        console.log(kdt)
+        var kdt = 10;
+        console.log(kdt)
+        
+        //let개념
+        let test = 23;
+        console.log("test:", test)
+        test = 30;
+        console.log("test:", test)
+        // let test = 49;
+
+        //const 개념
+        const value = 10;
+
+        //typeof
+        console.log(typeof("hi"))
+        console.log(typeof(10))
+        console.log(typeof(false))
+        console.log(typeof(true))
+        console.log(typeof(null));
+        console.log(typeof([{}]))
+        
+        //형변환
+        const check = true;
+        console.log("check: ", typeof(check))
+        console.log("check: ", typeof(String(check)))
+        console.log("check: ", typeof(check.toString()))
+        console.log("check: ", typeof(Number("23")))
+
+        //object
+        var obj = {
+            name : "martin",
+            born: '일산',
+            age : 20,
+            move: function() {
+                return "퇴근";
+            }
+        }
+
+        console.log(obj.age);
+        console.log(obj.move());
+
+        var arr = [1,2,3,4,5]
+        var arr2 = new Array(1, 2, 3, "안녕하세요", "반갑습니다");
+        
+        console.log(arr[0])
+
+        </script>
+</body>
+</html>

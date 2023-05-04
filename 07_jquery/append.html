@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+
+</head>
+<body>
+    <ul class = "colors">
+        <li class = "orange">orange</li>
+        <li class = "green">green</li>
+        <li class = "navy">navy</li>
+    </ul>
+
+    <h4>append() - 선택된 요소의 자식요소 중 마지막에 추가</h4>
+    <button onclick="appendJs()">js바꾸기</button>
+    <button onclick="appendJquery()">jquery바꾸기</button>
+
+    <h4>prepend() - 선택된 요소의 자식요소 중 맨 앞에 추가</h4>
+    <button onclick="prependJs()">js바꾸기</button>
+    <button onclick="prependJquery()">jquery바꾸기</button>
+
+    <h4>before() - 선택된 요소의 형제이면서 이전 형제로 추가</h4>
+    <button onclick="beforeJs()">js바꾸기</button>
+    <button onclick="beforeJquery()">jquery바꾸기</button>
+    
+    <ul class="nums">
+        <li>1</li>
+        <li id="li2">2</li>
+        <li>3</li>
+    </ul>
+
+    <h4>remove() - 선택된 요소의 Dom을 삭제</h4>
+    <button onclick="removejs()">js바꾸기d</button>
+    <button onclick="removejquery()">jquery바꾸기</button>
+
+    <h4>empty() - 선택된 요소의 자식요소를 모두 삭제</h4>
+    <button onclick="emptyjs()">js바꾸기d</button>
+    <button onclick="emptyjquery()">jquery바꾸기</button>
+    
+    <h4>요소탐색</h4>
+    <div class="root">
+        <div class="parent">
+            <div class="child1">자식1</div>
+            <div class="child2">자식2</div>
+            <div class="child3">자식3</div>
+        </div>
+    </div>
+
+    <button onclick="findParent()">부모찾기</button>
+    <button onclick="findParents()">조상찾기</button>
+    <button onclick="findNext()">다음 형제 찾기</button>
+    <button onclick="findPrev()">이전 형제 찾기</button>
+    <button onclick="findChildren()">모든 자식 찾기</button>
+
+    <h4>클래스 제어하기</h4>
+    <p class="origin-class">기존 클래스</p>
+    <button onclick="addClass()">클래스 추가</button>
+    <button onclick="addClassJs()">js클래스 추가</button>
+    <button onclick="removeClass()">클래스 삭제</button>
+    <button onclick="removeClassJs()">js클래스 삭제</button>
+    <button onclick="hasClass()">클래스 유무 확인</button>
+    <button onclick="hasClassJs()">js클래스 유무 확인</button>
+    <button onclick="toggleClass()">클래스 토글</button>
+    <button onclick="toggleClassJs()">클래스 토글</button>
+    
+
+    <script src="append.js"></script>
+</body>
+</html>

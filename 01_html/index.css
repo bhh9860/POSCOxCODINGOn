@@ -1,0 +1,19 @@
+/* id선택자 - # */
+#hello {
+    /* color : rgb(123,211,22) */
+    color : #ff003f;
+}
+
+#back {
+    background-color: black;
+    background-image : url("Marvel_Logo.svg.png");
+    background-size : 100%;
+    background-repeat : no-repeat;
+    background-position: center;
+    height : 100vh; 
+
+}
+
+.backIn {
+    color : white;
+}

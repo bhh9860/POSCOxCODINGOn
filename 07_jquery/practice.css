@@ -1,0 +1,43 @@
+.text-center {
+    text-align : center;
+}
+
+.flex_center {
+    display : flex;
+    justify-content: center;
+}
+
+.flex_align_center {
+    display : flex;
+    align-items: center;
+}
+
+section img {
+    width : 150px;
+    height : 150px;
+}
+
+.article {
+    width : 200px;
+    height : 280px;
+    background-color: rgb(247, 227, 230);
+    border-radius: 15px;
+    display : flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left : 10px;
+}
+
+.img_background {
+    width : 150px;
+    height : 150px;
+    background-color: rgb(240, 210, 215);
+    border-radius: 75px;
+}
+
+section p {
+    margin : 0px;
+    font-size : 13px;
+    font-weight: bold;
+    background-color: rgb(#f0eeee);
+}

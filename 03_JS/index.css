@@ -1,0 +1,18 @@
+for(let i=2;i<=9;i++) {
+    console.log("==== "+i+" 단====");
+    for(let j=1;j<=10;j++) {
+        console.log(i+' * '+j+' = '+i*j);
+    }
+}
+
+let n = 99;
+let sum = 0;
+
+for(let i=1; i<=n; i++) {
+    if ((i % 2) == 0 || (i % 3) == 0) {
+        console.log(i+"은 2, 3의 배수");
+        sum += i;
+        console.log(sum)
+    }
+
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="hello" class="hi" name="good">안녕하세요</div>
+    <div id='come' class="hi">어서오세요</div>
+    <div id="world">Hello world</div>
+    <a href="https://www.naver.com" target="_blank">이동</a>
+
+    <script>
+
+        // console.log(document.head)
+        // console.log(document.getElementsByTagName('div'))
+        // console.log(document.getElementById('hello'))
+        // console.log(document.getElementsByClassName('hi'))
+        // console.log(document.getElementsByName('good'))
+        // console.log(document.querySelector('.hi'))
+        // console.log(document.querySelector('#come'))
+        // console.log(document.querySelectorAll('.hi'))
+        // console.log(document.getEle)
+
+
+        // document.write("안녕하십니까?")
+        
+
+        document.getElementById('world').className = 'hi'
+        const world = document.getElementById('world');
+        console.log(world.getAttribute('class'))
+
+        const p = document.createElement('p').innerHTML = "새로생성";
+        document.happend(p);
+
+    </script>
+
+</body>
+</html>

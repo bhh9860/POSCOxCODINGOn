@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div onclick="alert('div태그를 클릭')">클릭</div>
+    <button id = "button">버튼</button>
+    <div id = "mouseover">마우스</div>
+    <button id = "button2">이벤트리스너</button>
+    <button id = "button3">one mouse event listener</button> -->
+
+    <button class='btn'>btn1</button>
+    <button class='btn'>btn2</button>
+    <button class='btn'>btn3</button>
+    <button class='btn'>btn4</button>
+    <button class='btn'>btn5</button>
+
+    <script>
+        // const btn = document.getElementById('button');
+        // btn.onclick = function() {
+        //     alert('버튼태크를 클릭');
+        // }
+
+        // function onMouseOver() {
+        //     console.log("마우스 오버");
+        //     over.style.color = 'red';
+        // }
+        // const over = document.getElementById('mouseover');
+        // function onMouseOut() {
+        //     over.style.color = 'blue'
+
+        // }
+        
+        // over.onmouseover = onMouseOver;
+        // over.onmouseout = onMouseOut
+    
+        //3번째 방법 addEventListener 방식
+        // const btn2 = document.querySelector('#button2');
+        // btn2.addEventListener('click', function() {
+        //     alert('이벤트 리스너 방식입니다');
+        // })
+
+        // function onMouseEnter() {
+        //     // alert('on mouse event입니다.')
+        //     const divs = document.createElement('div')
+        //     btn2.append(divs)
+        // }
+
+        // const btn3 = document.querySelector('#button3');
+        // btn3.addEventListener('mouseenter', onMouseEnter);
+        
+        const btns = document.querySelectorAll('.btn');
+        function bgColor() {
+            this.style.backgroundColor = "blue";
+        }
+
+        for(let btn of btns) {
+            console.log(btn)
+            btn.addEventListener('click', bgColor);
+        }
+
+    </script>
+</body>
+</html>

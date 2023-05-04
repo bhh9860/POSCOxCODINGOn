@@ -1,0 +1,65 @@
+.circle {
+    width : 100px;
+    height : 100px;
+    border-radius: 50px;
+}
+
+#head {
+    background-color : skyblue;
+    position: relative;
+}
+
+img {
+    width : 500px;
+    height : 200px;
+    position : absolute;
+    top: 90px;;
+}
+
+#eyes1 {
+    width : 50px;
+    height : 50px;
+    border-radius: 25px;;
+    background-color: white;
+    position: absolute;
+    right : 30px;
+    bottom: 30px;
+}
+
+#eyes2 {
+    width : 25px;
+    height : 25px;
+    border-radius: 12.5px;
+    background-color: black;
+    position: absolute;
+    right : 50px;
+    bottom : 50px;
+}
+
+#body1 {
+    background-color: blue;
+    position: absolute;
+    left : 80px;
+    top : 40px;
+}
+
+#body2 {
+    background-color: rgb(51, 35, 218);
+    position: absolute;
+    left : 130px;
+    top : 70px;
+}
+
+#body3 {
+    background-color: rgb(48, 135, 188);
+    position: absolute;
+    left : 190px;
+    top : 80px;
+}
+
+#body4 {
+    background-color: rgb(18, 222, 195);
+    position: absolute;
+    left : 250px;
+    top : 80px;
+}

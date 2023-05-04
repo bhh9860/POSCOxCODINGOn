@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="a.css" type=text/css>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function startGame() {
+            const answer = Math.floor(Math.random()*10)+1;
+            let guessValue = prompt("UP and DOWN 게임을 시작합니다!");
+
+            while(answer != Number(guessValue)) {
+                
+                if(guessValue == "Q" || guessValue == "포기") {
+                    alert("포기하셨습니다.");
+                    break;
+                } else if(Number(guessValue) === answer) {
+                    alert("포기하셨습니다.");
+                    break;
+                } else if(Number(guessValue) > answer) {
+                    alert("Down");
+                    guessValue = prompt("숫자를 입력해주세요");
+                } else if(Number(guessValue) < answer) {
+                    alert("Up");
+                    guessValue = prompt("숫자를 입력해주세요");
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

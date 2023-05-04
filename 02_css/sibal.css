@@ -1,0 +1,63 @@
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: omyu_pretty;
+    background-color : bisque
+
+}
+
+#text {
+    font-size : 50px;
+    color : blueviolet;
+}
+
+#box {
+    width : 500px;
+    height : 500px;
+    margin-left : 100px;
+    border : 10px dotted blueviolet;
+    padding : 30px;
+    font-size : 50px;
+    text-align: center;
+    background-color : yellowgreen;
+}
+
+#click:active {
+    font-size : 510px;
+    color : blueviolet;
+}
+
+a:visited {
+    color : red;
+    text-decoration-style: none;;
+}
+
+.fruits span:first-child {
+    color : red;
+}
+
+.fruits h3:last-child {
+    color : violet;
+}
+.fruits span:first-child {
+    color:red;
+ }
+ .fruits h3:last-child {
+    color:violet;
+ }
+ .list span:nth-child(even) {
+    border: 1px solid red;
+    padding: 5px;
+ }
+ .list span:nth-child(odd) {
+    border: 1px solid blue;
+    padding: 5px;
+ }
+ .fruits *:not(span) {
+    font-size: 30px;
+ }

@@ -1,0 +1,7 @@
+.red tr th:nth-child(1) {
+    color : red;
+}
+
+.red tr th:nth-child(7) {
+    color : blue;
+}

@@ -1,0 +1,86 @@
+@font-face {
+    font-family: 'omyu_pretty';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-01@1.0/omyu_pretty.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'omyu_pretty';
+    font-size : 80px;
+}
+
+#hello {
+    color : red;
+}
+
+/* contain : 이미지가 잘리거나 찌그러지지 않는 한도안에서 제일 크게 설정된다.
+
+cover : 이미지가 찌그러지지 않는 한도내에서 제일 크게 설정된다.
+이미지의 가로, 세로비가 요소와 다르다면 이미지를 세로 또는 가로방향으로 잘라내어 빈 공간이 생기지 않도록 설정합니다.*/
+
+#back {
+    /* background-image : url("cat.jpg"); */
+    /* background-size : contain;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height : 100vh; */
+    background-color : black;
+    color : yellow;
+    text-align : justify;
+}
+
+#hi {
+    color : red;
+    font-size : 150px;
+    font-weight: 200;
+    
+}
+
+#border {
+    width : 400px;
+    height : 400px;
+    border : 4px solid red;
+    border-width : 10px;
+    border-style: dotted;
+    background-color : yellowgreen;
+    margin : 200px;
+    padding : 30px;
+}
+
+.circle {
+    width : 100px;
+    height : 100px;
+    border-radius: 50px;
+}
+
+#circle1 {
+    background-color: brown;
+}
+
+#circle2 {
+    background-color: green;
+    position : relative;
+    left:100px;
+}
+
+#circle3 {
+    background-color: aqua;
+    position: absolute;
+    left:30px;
+    top:40px;
+}
+
+#circle4 {
+    background-color: chocolate;
+    position: fixed;
+    top : 20px;
+    left : 20px;
+}
+
+.cat {
+    position: absolute;
+    top : 50%;
+    left : 50%;
+    transform: (-50%, -50%);
+}

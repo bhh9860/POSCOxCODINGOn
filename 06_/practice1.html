@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">div태그입니다.</div>
+
+<script>
+    const ch = document.querySelector('#div1');
+    const kl = document.getElementById('div1');
+    console.log(ch)
+    console.log(kl)
+    ch.addEventListener('mouseover', function() {
+        ch.style.color = 'red';
+        ch.style.fontWeight = '700';
+        }
+    )
+    
+
+</script>
+</body>
+</html>

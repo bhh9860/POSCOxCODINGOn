@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="practice3.css" type=text/css>
+    
+    <title>Document</title>
+</head>
+<body>
+      <!-- <div class="form">
+        <img src="q.jpg">
+        <div class="center">
+            <button onclick="apple()">사과</button>
+            <button onclick="banana()">바나나</button>
+            <button onclick="grapes()">포도</button>
+            <button onclick="peach()">복숭아</button>
+        </div>
+      </div>
+
+    
+    <script>
+        function apple() {
+            $('img').attr('src', 'apple.jpg')
+        }
+        function banana() {
+            $('img').attr('src', 'bananas.jpg')
+        }
+        function grapes() {
+            $('img').attr('src', 'grapes.jpg')
+        }
+        function peach() {
+            $('img').attr('src', 'peaches.jpg')
+        } -->
+
+        <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script
+    src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8="
+    crossorigin="anonymous"></script>
+    <title>Document</title>
+</head>
+<body>
+    <img src="./image/q.jpg" alt="" width="200" height="300">
+    <br />
+    <button class="btn apple">사과</button>
+    <button class="btn banana">바나나</button>
+    <button class="btn grape">포도</button>
+    <button class="btn peache">복숭아</button>
+    <script>
+        $('.btn').click(function() {
+            // if( $(this))
+            //console.log($(this))
+            // if( $(this).hasClass('apple')) {
+            //     $('img').attr('src', './image/apple.jpg')
+            // } else if( $(this).hasClass('banana')) {
+            //     $('img').attr('src', './image/bananas.jpg')
+            // } else if( $(this).hasClass('grape')) {
+            //     $('img').attr('src', './image/grapes.jpg')
+            // } else if( $(this).hasClass('peache')) {
+            //     $('img').attr('src', './image/peaches.jpg')
+            // }
+            
+            //리팩토링
+            let fruits;
+            if( $(this).hasClass('apple')) {
+                fruits = 'apple'
+            } else if( $(this).hasClass('banana')) {
+                fruits = 'bananas'
+            } else if( $(this).hasClass('grape')) {
+                fruits = 'grapes'
+            } else if( $(this).hasClass('peache')) {
+                fruits = 'peaches'
+            }
+            $('img').attr('src', `${fruits}.jpg`)
+        })
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+        
+        
+
+
+    </script>
+    <script src="practice3.js"></script>
+</body>
+</html>

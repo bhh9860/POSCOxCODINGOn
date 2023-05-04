@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #circle {
+            width:30px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: red;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+    <!-- <input id="keyboard"></input>
+    <input id="circle"></input> -->
+    <!-- <form action="/" id="todo-form">
+        <input type="text" name="todo">
+        <button>Add</button>
+    </form>
+    <ul class="todos"></ul> -->
+    <input type="text" id="change-input">
+    <div class="intro"></div>
+    <script>
+        // const keyboard = document.querySelector('#keyboard')
+        // keyboard.addEventListener('keydown', function(event) {
+        //     //console.log(event.code)
+        //     if( event.code == 'ArrowUp') {
+        //         console.log('up')
+        //     }
+        // })
+        // const circle = document.querySelector('#circle')
+        // circle.addEventListener('keydown', function(e) {
+        //     if( e.code == 'ArrowRight') {
+        //         circle.style.left ="50px";
+        //     }
+        // })
+        // const todoForm = document.querySelector('#todo-form')
+        // const todos = document.querySelector('.todos')
+        // //console.log(todoForm)
+        // todoForm.addEventListener('submit', function(e) {
+        //     e.preventDefault();
+        //     //console.log(e)
+        //     const todoInput = document.querySelector('input[name=todo]');
+        //     console.log(todoInput.value)
+        //     const todo = todoInput.value
+        //     const newTodo = document.createElement('li')
+        //     newTodo.append(todo)
+        //     todos.append(newTodo)
+        //     todoInput.value = ''
+        // })
+
+        const cinput = document.querySelector('#change-input');
+        cinput.addEventListener('change', function() {
+            console.log('변경되었습니다');
+        })
+
+        cinput.addEventListener('input', function() {
+            let div = document.querySelector('.intro');
+            div.textContent = this.value
+        })
+    </script>
+</body>
+</html>

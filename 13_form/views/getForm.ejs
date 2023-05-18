@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 </head>
 
 <body>
-    <form action="/getFormResult" method="POST">
+    <form name="register">
         <label for="name">이름</label>
         <input type="text" name="name" id="name">
         <br>
         <fieldset>
             <legend>성별</legend>
-            <input type="radio" name="gender" value="man" id="man">
+            <input type="radio" name="gender" value="남자" id="man">
             <label for="man">남자</label>
-            <input type="radio" name="gender" value="woman" id="woman">
+            <input type="radio" name="gender" value="여자" id="woman">
             <label for="woman">여자</label>
         </fieldset>
         <br>
@@ -43,16 +45,83 @@
         </fieldset>
         <fieldset>
             <legend>관심사</legend>
-            <input type="checkbox" name="hobby" value="travel" id="travel">
+            <input type="checkbox" name="hobby" value="여행" id="travel">
             <label for="travel">여행</label>
-            <input type="checkbox" name="hobby" value="fashion" id="fashion">
+            <input type="checkbox" name="hobby" value="패션" id="fashion">
             <label for="fashion">패션</label>
-            <input type="checkbox" name="hobby" value="food" id="food">
+            <input type="checkbox" name="hobby" value="음식" id="food">
             <label for="food">음식</label>
         </fieldset>
         <br>
-        <input type="submit" value="회원가입">
+        <input type="button" value="회원가입" onclick="axiosGet()">
     </form>
+    <div class="result"></div>
+
+    <h1>login</h1>
+    <form id="login">
+        <label for="id">아이디</label>
+        <input type="text" id="id" name="id">
+        <br>
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password">
+        <button type="button" onclick="login()">로그인</button>
+    </form>
+    <div class="loginresult"></div>
+
+    <script>
+        const result = document.querySelector(".result")
+
+        function axiosGet() {
+        console.log("axios GET !!!!!!!!");
+
+        const form = document.forms["register"];
+            const checkbox = document.querySelectorAll("input[type='checkbox']:checked");
+            let checkboxArray = []
+            for (let i = 0; i<checkbox.length;i++) {
+                checkboxArray.push(checkbox[i].value)
+            }
+            console.log(checkbox[0])
+
+
+        const data = {
+          name: form.name.value,
+          gender: form.gender.value,
+          year: form.year.value,
+          month: form.month.value,
+          day: form.day.value,
+          hobby: form.hobby.value
+        };
+
+        axios({
+          url: "/axios",
+          method: "get",
+          params: data, //get일때는 params
+        }).then(function (abc) {
+          const { name, gender, year, month, day, hobby } = abc.data;
+          console.log(hobby)
+          result.textContent = `axios GET : 이름은 ${name}이고 ${gender}이로다.
+          생일은 ${year}년${month}월${day}일이고 관심사는 ${checkboxArray.join()}이군!`;
+        });
+      }
+
+
+      const loginresult = document.querySelector('.loginresult');
+      function login() {
+        const form = document.querySelector('#login');
+        const formValue = {
+            id: form.id.value,
+            password: form.id.value
+        }
+
+        axios({
+            method: "POST",
+            url: "/axios",
+            data: formValue,
+        }).then(function(data) {
+            
+        })
+      }
+    </script>
 </body>
 </html>
 </body>

@@ -3,7 +3,35 @@ const app = express(); //첨부한 라이브러리를 가지고 객체를 만들
 app.use(express.urlencoded({extended: true})) 
 
 const MongoClient = require('mongodb').MongoClient;
+
+var db;
 MongoClient.connect('mongodb+srv://bhh9860:skcmzlfpa0~@cluster0.ainfsiy.mongodb.net/?retryWrites=true&w=majority', function(에러, client) {
+	//연결되면 할 일
+	if (에러) return console.log(에러)
+
+	db = client.db('todoapp');
+
+	app.post('/add', function(req, res) {
+		value = req.body
+		db.collection('post').insertOne({
+			todoname : value.todo,
+			date : value.todo2  
+		}, function(에러, 결과) {
+			console.log('저장완료');
+		});
+		res.send('요청완료');
+	})
+
+	db.collection('post').insertOne({
+		이름 : 'John',
+		나이 : 20,
+		_id : 100  }, function(에러, 결과) {
+		console.log('저장완료');
+	});
+
+
+
+
 
 	app.listen(8080, function() {
 		console.log('listening on 8080') // 잘 열리면 콘솔로그쳐라
@@ -24,7 +52,4 @@ app.get('/write', function(req, res) {
 	res.sendFile(__dirname + '/write.html');
 })
 
-app.post('/add', function(req, res) {
-	console.log(req.body.todo);
-	res.send('요청완료');
-})
+

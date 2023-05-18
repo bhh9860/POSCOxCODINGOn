@@ -16,6 +16,14 @@ app.get('/', function(req, res) {
     res.render('getForm')
 }) 
 
+app.get('/axios', function(req, res) {
+    res.send(req.query);
+})
+
+app.post('/axios', function(req, res) {
+    res.send(req.body);
+})
+
 app.post('/getFormResult', function(req, res) {
     value = req.body
     res.render('getFormResult', value)

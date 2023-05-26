@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <h4>로그인</h4>
+    <form name="login">
+      <label for="id">아이디</label>
+      <input type="text" id="id" name="userId" />
+      <br />
+      <label for="pw">비밀번호</label>
+      <input type="password" id="pw" name="userPw" />
+      <br />
+      <button type="button" onclick="axiosLogin()">로그인</button>
+    </form>
+    <br />
+    <div class="result"></div>
+
+    <script>
+      const result = document.querySelector(".result");
+
+      function axiosLogin() {
+        console.log("axiosLogin!!!!");
+
+        const form = document.forms["login"];
+        // const data = {
+        //   id: form.userId.value,
+        //   pw: form.userPw.value,
+        // };
+
+        //예외처리
+        //console.log(form.userId.value);
+        if (form.userId.value === "" || form.userPw.value === "") {
+          result.textContent = `아이디와 비밀번호를 입력하세요`;
+          return;
+        }
+
+        axios({
+          method: "POST",
+          url: "/user/login", //api주소 // endpoint
+          data: {
+            id: form.userId.value,
+            pw: form.userPw.value,
+          },
+        }).then((res) => {
+          console.log(res);
+          console.log(res.data);
+          if (res.data.result === true) {
+            result.textContent = `로그인에 성공하였습니다.`;
+            result.style.color = "blue";
+          } else {
+            result.textContent = `로그인에 실패하였습니다`;
+            result.style.color = "red";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

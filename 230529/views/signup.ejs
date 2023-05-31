@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <h4>회원가입</h4>
+    <form name="form_register">
+        <label for="userid">ID</label>
+        <input type="text" id="userid" required /><br />
+        <label for="pw">PASSWORD</label>
+        <input type="password" id="pw" required /><br />
+        <label for="username">NAME</label>
+        <input type="text" id="username" required /><br />
+        <button type="button" onclick="register()">제출</button>
+    </form>
+    <div>
+        <a href="/user/signin">로그인</a>
+    </div>
+
+    <script>
+        function register() {
+            const form = document.forms['form_register'];
+
+            if(!form.checkValidity()) {
+                return;
+            }
+
+            //값 들어간다~(비동기)클라이언트에서 서버한테
+            axios({
+                method : "POST",
+                url: "/user/signup",
+                data: {
+                    userid: form.userid.value,
+                    name: form.username.value,
+                    pw: form.pw.value
+                }
+                //res로 데이터 받고
+            }).then((res) => {
+                console.log('siba', res.data )
+                if(res.data.result) {
+                    alert('회원가입 성공');
+                    location.href = '/user/signin';
+                };
+            }) 
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+<body>
+    <!-- <div>데이터는<%= data[0].id %></div> -->
+    <form name="user">
+        <fieldset>
+            <legend>회원가입</legend>
+            <label for="userId">
+                아이디 : <input type="text" id="userId">
+            </label><br>
+            <label for="userPw">
+                비밀번호 : <input type="password" id="userPw">
+            </label><br>
+            <label for="userName">
+                이름 : <input type="text" id="userName">
+            </label><br>    
+            <button type="button" onclick="register()"> 회원가입  </button>
+        </fieldset>
+    </form>
+
+</body>
+<script>
+    function register() {
+        const form = document.forms["user"];
+        data = {
+            userId : form.userId.value,
+            userPw : form.userPw.value,
+            userName : form.userName.value
+        }
+
+        // 아이디 노입력
+        if (data.userId.length === 0) {
+            alert("아이디를 입력해라!")
+            return;
+        } else if (data.userPw.length === 0) {
+            alert('비밀번호를 입력해라!')
+            return;
+        } else if (data.userName.length === 0) {
+            alert('이름 입력해라!')
+            return;
+        }
+
+        
+        
+    }
+</script>
+</html>
